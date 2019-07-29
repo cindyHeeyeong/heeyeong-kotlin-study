@@ -1,3 +1,11 @@
-1. 기본 자료형 
--코틀린은 모든 타입을 객체로 표현한다.
-![default type](./git image/default type.png)
+자료형 
+참고 : https://woovictory.github.io/2018/08/01/kotlin-concept-2/
+1. 기본 자료형
+-코틀린은 자바의 원시 타입을 객체로 표현한다.
+-값이나 변수의 타입으로 사용되는 경우 : 원시 타입으로 변환
+-컨렉션의 타입 인자로 사용되는 경우 : 래퍼로 변환
+
+
+2. 숫자
+-Number를 상속하는 자료형 : Byte, Double, Float, Int, Long, Short
+-
