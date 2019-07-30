@@ -40,10 +40,39 @@ val ch : Char = code.toChar()
 
 4. 논리
 참과 거짓을 표현하기 위해 사용하는 자료형
-```java
 val foo : Boolean = true
 val bar : Boolean = false
-```
 
-5. 문자열ㅍ
+
+5. 문자열
+val foo : String = "cindy"
+JAVA처럼 규격화된 문자열을 사용하고 싶다면 
+val length : Int = 3000
+val lengthText : String = String.format("Length : %d meters". length)
+
+6. 배열
+자바에서는 배열타입이 별로도 존재하지만, 코틀린에서의 배열 타입은 인자를 갖는 Array 클래스로 표현한다.
+java
+String[] words = new String[] { "L", "n"};
+kotlin
+val words : Array<String> = arrayof("Lorem", "ipsum", "dolor", "sit")
+
+-int type 배열을 사용할 때
+val intArr : IntArray = intArrayOf(1,2,3)
+-래퍼 타입 배열을 선언 할 때
+val intArr : Array<Int> = arrayOf(1,2,3)
+-배열을 인자로 받은 메소드를 호출할 때
+1) 
+val intArr : IntArray = intArrayOf(1,2,3)
+foo(*intArr)
+
+2)배열을 인자로 받은 경우에 호출할 때
+val intArr : Array<Int> = arrayOf(1,2,3)
+foo(intArr)  ---> 배열을 인자에 바로 대입한다
+
+3) 가변인자를 받은 경우
+val StringArr : Array<String> = arrayOf("L", "B", "C")
+bar(*StringArr) --> 스프레드 연산자(*) 사용
+
+
 
