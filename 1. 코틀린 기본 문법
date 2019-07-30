@@ -38,3 +38,12 @@ val c : Char = 65 이런 방식으로 짜고 싶으면
 val code : Int = 65
 val ch : Char = code.toChar() 
 
+4. 논리
+참과 거짓을 표현하기 위해 사용하는 자료형
+```kotlin
+val foo : Boolean = true
+val bar : Boolean = false
+```
+
+5. 문자열ㅍ
+
