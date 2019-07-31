@@ -1,1 +1,13 @@
-컬렉션
+<컬렉션>
+-가변 타입(자료를 수정할 수 있음), 불변 타입(수정이 불가)으로 구성
+
+kotlin
+//자료 수정이 불가능한 리스트 반환
+fun immutable() : List<String> { }
+//자료 수정이 가능한 리스트 반환
+fun mutable() : MutableList<String> { }
+
+java (위의 코틀린 코드를 자바로 변환하면 -> 모두 자바의 List 인터페이스로 변환된다)
+따라서 immutable, mutable 타입은 자바로 변환하면 리스트 내 자료를 모두 수정할 수 있게 된다. 
+List<String> immutableList = immutable()
+List<String> mutableList = mutable()
