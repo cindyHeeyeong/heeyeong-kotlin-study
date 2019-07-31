@@ -1,5 +1,5 @@
 <컬렉션>
--가변 타입(자료를 수정할 수 있음), 불변 타입(수정이 불가)으로 구성
+1.가변 타입(자료를 수정할 수 있음), 불변 타입(수정이 불가)으로 구성
 
 kotlin
 //자료 수정이 불가능한 리스트 반환
@@ -11,3 +11,39 @@ java (위의 코틀린 코드를 자바로 변환하면 -> 모두 자바의 List
 따라서 immutable, mutable 타입은 자바로 변환하면 리스트 내 자료를 모두 수정할 수 있게 된다. 
 List<String> immutableList = immutable()
 List<String> mutableList = mutable()
+
+예제 코드 : 컬렉션을 생성하는 함수, 자료의 수정 가능 여부를 결정하는 인터페이스를 사용하는 예
+//자료를 수정할 수 없는 리스트 생성 (immutableList는 자료를 수정할 수 없다)
+val immutableList : List<String> = listOf("l", "d", "d")
+
+//컴파일 에러가 나는 케이스 
+immutableList.add("amet") -> 자료 수정을 위한 함수를 지원하지 않는다
+
+//자료를 수정할 수 있는 리스트 생성 (MutableList는 자료를 수정할 수 있다)
+val mutableList : MutableList<String> = arrayListOf("g","g")
+
+//자료를 수정하지 않는 자료형으로 재할당
+val immutableList2 : List<String> = mutableList
+
+//컴파일 에러
+mutableList.add("a")
+
+
+2. list에 접근 하는 법 
+val immutableList : List<String> = listOf("l", "d", "c")
+//첫번째 항목 읽기
+val firstItem : String = immutableList[0]
+//컴파일 에러 -> List<String>이기 때문에 값 설정(변경)이 불가하다 
+immutableList[0] = "Lollypop" 
+
+val mutableList : MutableList<String> = arrayListOf("l", "d")
+//자료 변경 가능
+mutableList[0] = "Lollopop"
+
+
+
+3.Map
+
+
+
+
