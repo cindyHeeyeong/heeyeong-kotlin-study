@@ -13,7 +13,7 @@ List<String> immutableList = immutable()
 List<String> mutableList = mutable()
 
 예제 코드 : 컬렉션을 생성하는 함수, 자료의 수정 가능 여부를 결정하는 인터페이스를 사용하는 예
-//자료를 수정할 수 없는 리스트 생성 (immutableList는 자료를 수정할 수 없다)
+//자료를 수정할 수 없는 리스트 생성 (List<String>는 자료를 수정할 수 없다)
 val immutableList : List<String> = listOf("l", "d", "d")
 
 //컴파일 에러가 나는 케이스 
@@ -29,7 +29,7 @@ val immutableList2 : List<String> = mutableList
 mutableList.add("a")
 
 
-2. list에 접근 하는 법 
+2. list 에 접근하는 법 
 val immutableList : List<String> = listOf("l", "d", "c")
 //첫번째 항목 읽기
 val firstItem : String = immutableList[0]
@@ -42,8 +42,19 @@ mutableList[0] = "Lollopop"
 
 
 
-3.Map
+3.Map에 접근하는 법
+val immutableMap : Map<String, Int> = mapOf(Pair("A",65), Pair("B",66))
+//키 "A"에 해당하는 값 - get("A")와 동일
+val code : Int = immutableMap["A"]
+//컴파일 에러 케이스 - put("C",67)와 동일하다
+immutableMap["C"] = 67
+
+val mutableMap : HashMap<String, Int> = hashMapOf(Pair("A", 65), Pair("B", 66))
+//자료 변경 가능
+mutableMap["C"] = 67
 
 
-
-
+--> 코틀린에서 제공하는 'to 함수'를 사용하면 
+val mutableMap : HashMap<String, Int> = hashMapOf(Pair("A", 65), Pair("B", 66))을 더 편리하게 생성 가능
+사용 법 :
+val map : Map<String, Int> = mapOf("A" to 65, "B" to 66)
