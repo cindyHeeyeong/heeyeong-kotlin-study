@@ -1,4 +1,4 @@
-1. 클래스와 인터페이스의 선언 및 인스턴스 생성
+1. 클래스 선언
 java
 package foo.bar;
 public class Baz { ... }
@@ -7,4 +7,64 @@ kotlin
 package foo.bar
 Class Baz {...}
 
+2. 추상 클래스
+클래스와 일부 멤버가 abstract로 선언되면 추상클래스이다. abstract 멤버는 아무런 구현이 없다.
+abstract class Student {
+abstract fun learnKotlin() //최소 하나 이상의 멤버가 abstract이여야 한다
+fun learnJava()
+}
+
+3. 상속
+상속을 하려면 open 키워드를 사용한다. 아무 선언이 없으면 코틀린의 클래스는 자바의 final 클래스(확장할 수 없는 클래스)와 동일하기 때문이다.
+abstract class Student : Person() {
+override abstract fun needSleep() 
+abstract fun learnKotlin()
+fun learnJava() { }
+}
+
+abstract class Person {
+open fun needToSleep() {} 
+}
+
+4. 인터페이스
+abstract method와 method의 구현도 가능하다. default 키워드로 메소드 구현도 가능하다.
+Java
+public interface Person {
+void needToSleep();
+default String getName {
+return "Hong"; }
+}
+Kotlin
+interface Person {
+fun needToSleep()
+fun getName : String = "Hong"
+}
+--> 인터페이스 오버라이드 하기
+interface Person {
+fun needToSleep()
+fun getName : String = "Hong"
+}
+
+오버라이드
+class Student : Person {
+override fun needToSleep() {}
+fun learnKotlin {} 
+override fun getName() : String {
+return "Tom"}
+
+--> 하나 이상의 인터페이스 오버라이드가 가능하다
+interface Person {
+fun needToSleep()
+fun getName : String = "Hong"
+}
+
+interface Adult {
+fun needToHoliday() }
+
+class Student : Person,Adult {
+override fun needToSleep() {}
+fun needToHoliday() {}
+fun learnKotlin {} 
+override fun getName() : String {
+return "Tom"}
 
