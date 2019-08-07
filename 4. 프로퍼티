@@ -46,4 +46,11 @@ lateinit var name : String ?
 lateinit 키워드 없이 var 변수에 초기화를 안하면 Uninitialized propertyAccesExction이 발생한다.
 
 
+kotlin
+class Person {
+var name = "No name" //var name : String = "No Name"
+var address : String ? = null
+
+
+
 
