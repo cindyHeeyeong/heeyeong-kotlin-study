@@ -9,11 +9,11 @@
 -코틀린은 이런 메소드의 호출을 금지함으로써 오류를 방지한다.
 
 Java
-~~~
+```java
 int strLen(String S) {
 return s.length();
 }
-~~~
+```
 
 이 함수에 null을 넘긴다면 NullPointerException이 발생한다.
 

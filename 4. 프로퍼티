@@ -3,7 +3,7 @@
 
 Java
 public class Person {
-private String name; 
+private String name;
 
 public String getName() {
 return name; }
@@ -12,15 +12,17 @@ this.name = name; }
 
 name에 접근하기 위해 getter/setter메소드가 늘어난다.
 
-코틀린은 이런 점을 해결하기 위해 프로퍼티를 사용한다. 
+코틀린은 이런 점을 해결하기 위해 프로퍼티를 사용한다.
 프로퍼티는 정보를 저장할 수 있는 필드와 getter/setter메소드를 함께 제공한다.
 앞의 자바 코드를 프로퍼티로 표현하면 다음과 같다
 
 Kotlin
+~~~
 class Person {
 var name : String ? = null
-var address : String ? = null 
+var address : String ? = null
 }
+~~~
 
 여기에서 프로퍼티의 타입으로 String ?을 사용했는데 해당 프로퍼티에 null이 들어갈 수 있음을 명시한다.
 코틀린의 프로퍼티도 값(val)와 변수(var) 중 하나로 선언한다.
@@ -50,7 +52,3 @@ kotlin
 class Person {
 var name = "No name" //var name : String = "No Name"
 var address : String ? = null
-
-
-
-
