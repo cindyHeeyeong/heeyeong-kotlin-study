@@ -1,8 +1,8 @@
-<h5>Constructor 정리</h5>
+<h5>Constructor </h5>
 
 <h6>1. Java에서의 생성자</h6>
 java에서의 생성자는 매개 변수 형태로 정의한다.<br>
-생성자를 여러개 두더라도 overriding을 통해 해결한다.
+생성자를 여러개 두더라도 overriding을 통해 해결한다.<br>
 ```java
 public class Sample {
   private String name;
@@ -26,7 +26,7 @@ public class Sample {
 -오버라이딩 : 상위 클래스가 가지고 있는 메소드를 하위클래스가 재정의 해서 사용한다.<br>
 
 <br>
-오버로딩 소스
+오버로딩 소스<br>
 ```java
 public class Overloading {
   void test() {
@@ -47,7 +47,7 @@ public class test {
 }
 ```
 <br>
-오버라이딩(하위 클래스가 상위클래스의 메소드를 재정의해서 사용) 소스
+오버라이딩(하위 클래스가 상위클래스의 메소드를 재정의해서 사용) 소스<br>
 ```java
 public class Employee {
   public String name;
@@ -67,6 +67,7 @@ public class Manager extends Employee {
   }
 }
 ```
+<br>
 ---
 
 <h6>2. kotlin에서 Constructor</h6>
