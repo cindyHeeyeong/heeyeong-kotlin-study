@@ -1,4 +1,4 @@
-<h5>Constructor</h5>
+<h5>Constructor 정리</h5>
 
 <h6>1. Java에서의 생성자</h6>
 java에서의 생성자는 매개 변수 형태로 정의한다.<br>
