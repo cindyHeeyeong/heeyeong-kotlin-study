@@ -3,7 +3,9 @@
 <h6>1. Java에서의 생성자</h6>
 java에서의 생성자는 매개 변수 형태로 정의한다.<br>
 생성자를 여러개 두더라도 overriding을 통해 해결한다.
-```java
+
+
+~~~
 public class Sample {
   private String name;
   private int age;
@@ -17,11 +19,11 @@ public class Sample {
     this.age = age;
   }
 }
-```
-<br><br>
+~~~
+
 
 ---
-* 참고 : overloding , overriding 이란? <br>
+* 참고 : overloding , overriding 이란?
 -오버로딩 : 같은 이름의 메소드를 여러개 가지면서 매개변수의 유형과 개수가 다르도록 만드는 것 <br>
 -오버라이딩 : 상위 클래스가 가지고 있는 메소드를 하위클래스가 재정의 해서 사용한다.<br>
 
@@ -72,7 +74,8 @@ public class Manager extends Employee {
 <h6>2. kotlin에서 Constructor</h6>
 -Constructor는 생성자의 역할을 할 수 있다<br>
 -java 와의 차이점 <br>
-Sample클래스를 java 스타일 대로 작성 <br>
+Sample클래스를 java 스타일 대로 작성
+
 ```java
 class Sample Constructor(val name : String) {
   Constructor(name : String, age : Int) : this (name)
@@ -81,6 +84,7 @@ class Sample Constructor(val name : String) {
 }
 ```
 코틀린 스럽게 다시 코딩하면 <br>
+
 
 ```java
 class Sample (val name : String, val age : Int=0) {
