@@ -23,7 +23,7 @@ public class Sample {
 
 
 ---
-* 참고 : overloding , overriding 이란?
+* 참고 : overloding , overriding 이란? <br>
 -오버로딩 : 같은 이름의 메소드를 여러개 가지면서 매개변수의 유형과 개수가 다르도록 만드는 것 <br>
 -오버라이딩 : 상위 클래스가 가지고 있는 메소드를 하위클래스가 재정의 해서 사용한다.<br>
 
@@ -83,7 +83,7 @@ class Sample Constructor(val name : String) {
   Constructor(name :String, age: Int, birthday : String, age : Int , birthday : String) :this(name, age)
 }
 ```
-코틀린 스럽게 다시 코딩하면 <br>
+코틀린 스럽게 다시 코딩하면 
 
 
 ```java
