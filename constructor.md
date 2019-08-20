@@ -5,7 +5,7 @@ java에서의 생성자는 매개 변수 형태로 정의한다.<br>
 생성자를 여러개 두더라도 overriding을 통해 해결한다.
 
 
-~~~
+~~~java
 public class Sample {
   private String name;
   private int age;
