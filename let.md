@@ -65,3 +65,27 @@ getTheBestPersonInTheWorld?.let(sendEmailTo(it.email))
 
 만약 getTheBestPersonInTheWorld가 null을 반환한다면 이 식은 절대 실행되지 않는다.
 let을 중첩시켜 처리하면 코드가 복잡해져 가독성의 문제가 생기기 때문에, 그런 경우 if문으로 처리하는게 낫다.
+
+<let 사용 규칙>
+
+- 지정된 값이 null이 아닌 경우에 코드를 실행할 때
+- nullable객체를 다른 nullable객체로 변환하는 경우
+- 단일 지역 변수의 범위를 제한 하는 경우
+
+~~~JAVA
+//null이 아닌 경우에 코드를 실행
+getNullablePerson?.let {
+  promote(it)
+}
+//nullable 객체를 다른 nullable 객체로 변환
+val driversLicence : Licence ?= getNullablePerson?.let {
+  //nullable person객체를 nullable driversLicence로 변경한다.
+  licenceService.getDriversLicence(it)
+}
+
+//단일 지역 변수의 범위를 제한 하는 경우
+val person : Person = getPerson()
+getPersonDao.let { dao ->
+  dao.insert(person)
+}
+~~~
